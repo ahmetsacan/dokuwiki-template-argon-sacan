@@ -19,7 +19,9 @@ video,
 .dokuwiki .toc,
 #dw__toc,
 #dokuwiki__pagetools,
-#dokuwiki__footer {
+#dokuwiki__footer,
+.ct-sidebar,
+.footer-card {
     display: none;
 }
 
