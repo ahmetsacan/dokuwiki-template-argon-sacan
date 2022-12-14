@@ -21,7 +21,7 @@ video,
 #dokuwiki__pagetools,
 #dokuwiki__footer,
 .ct-sidebar,
-.footer-card {
+.card.footer-card {
     display: none;
 }
 
