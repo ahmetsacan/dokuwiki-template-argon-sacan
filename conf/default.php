@@ -2,7 +2,6 @@
 $conf['discussionPage']   = 'discussion:@ID@';
 $conf['userPage']         = 'user:@USER@:';
 
-# Ahmet likes having the config variable types and their defaults be defined in one place (default.php).
 $conf['navbar'] = 'siteicons,usericons,searchform';
 $conf['sidebar'] = 'sidebarheader.html,sidebarpage,sidebarfooter.html';
 $conf['contenttop'] ='msgarea,header.html,pageicons,breadcrumbs';
