@@ -1,6 +1,16 @@
 # Argon Dokuwiki Template
 
-_This template is unmaintained. Consider using a more maintained fork like [dokuwiki-krypton](https://github.com/fablab-luenen/dokuwiki-krypton), [UmanIT-Argon-Dokuwiki-Template](https://github.com/umanit/UmanIT-Argon-Dokuwiki-Template), [eduardomozart's fork](https://github.com/eduardomozart/Argon-Dokuwiki-Template/tree/patch-4), [SimpleDoku](https://github.com/kalenpw/SimpleDoku), [jacksitlab's fork](https://github.com/jacksitlab/Argon-Dokuwiki-Template/tree/v1.3-patch), [Destwin-Dokuwiki-Template](https://github.com/evanmeier/Destwin-Dokuwiki-Template), or [others](https://github.com/IceWreck/Argon-Dokuwiki-Template/network)._
+Forked from: [IceWreck/Argon-Dokuwiki-Template](https://github.com/IceWreck/Argon-Dokuwiki-Template) -> [Mickeel/Argon-Dokuwiki-Template/](https://github.com/IceWreck/Argon-Dokuwiki-Template) -> [https://github.com/ahmetsacan/dokuwiki-template-argon](https://github.com/ahmetsacan/dokuwiki-template-argon). Also see [other forks](https://github.com/IceWreck/Argon-Dokuwiki-Template/network).
+
+Changes made by Ahmet:
+* Fixed some javascript errors that were popping up about PerfectScrollbar.
+* Added (close to) full customization of what is shown where. For each of the navbar, sidebar, footer, and contenttop sections, you can control what is shown. The things to show include pageicons, siteicons, usericons, pagetools, sitetools, usertools (these *tools appear as list items as opposed to icons), searchform, breadcrumbs, sidebarpage, pageinfo, userinfo, and any wiki page. These all can be controlled in the admin configuration page.
+* Added printview functionality to show just the main page content if the URL contains 'printview' parameter.  When in printview, there is also a hack to inject the printview=1 parameter into all of the links shown on the page. Printview and the link injections options are off by default; you can turn them on in the admin configuration page.
+* Added option to hide the first title of the page, when URL contains 'notitle' parameter. Together with printview, I find this useful when embedding the page elsewhere in an iframe. The notitle functionalify is off by default; you can turn it on in the admin configuration page.
+
+
+
+
 
 
 Argon - a clean, responsive, modern template for Dokuwiki.

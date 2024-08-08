@@ -1153,6 +1153,9 @@
     }
 
     if (!element || !element.nodeName) {
+       //ahmet: just return instead of throwing an error.
+       //console.log(('no element is specified to initialize PerfectScrollbar'));
+      return;
       throw new Error('no element is specified to initialize PerfectScrollbar');
     }
 

@@ -5469,7 +5469,6 @@ input[type=button].btn-block {
   margin-bottom: 0;
   list-style: none;
 }
-
 .navbar-nav .nav-link {
   padding-right: 0;
   padding-left: 0;
@@ -6088,10 +6087,10 @@ input[type=button].btn-block {
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;
-  padding: 0.75rem 1rem;
-  margin-bottom: 1rem;
+  padding: 0.75rem 0.1rem;
+  margin-bottom: 0rem;
   list-style: none;
-  background-color: #e9ecef;
+  background-color: #f9fcff;
   border-radius: 0.25rem;
 }
 
@@ -24259,8 +24258,8 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   }
 }
 .ct-navbar .navbar-nav .nav-link {
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0;
+  padding-left: 0;
   color: rgba(255, 255, 255, 0.9) !important;
 }
 
@@ -24801,7 +24800,7 @@ select {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  margin: 1.75rem 0 0.5rem;
+  margin: 0.2rem 0 0.5rem;
 }
 .argon-doku-page-menu li {
   display: inline;
@@ -24882,12 +24881,12 @@ textarea {
 
 .doku_form .no {
   margin: 0rem;
-  height: 1.5rem;
+  /* height: 1rem; */
   padding: 0rem;
 }
 .doku_form .no #qsearch__in {
   width: 10rem;
-  height: 1.5rem;
+  height: 1rem;
   margin: 0rem;
   margin-right: 1rem;
   margin-left: 1rem;
@@ -25022,8 +25021,8 @@ textarea {
 .leftsidebar li {
   list-style-type: none;
   display: block;
-  font-size: 0.84rem;
-  padding: 0.25rem;
+  font-size: 0.95rem;
+  padding: 0.1rem;
   color: #4c555a;
   font-weight: 400;
 }
@@ -25063,4 +25062,53 @@ textarea {
   margin-left: 0em;
 }
 
+/* ahmet: condensing the navbar */
+.navbar ul{
+  padding-left: 0.5rem;
+}
+.navbar-nav li{
+  margin-left: 0.5rem
+}
+.navbar .btn, .navbar button{
+  padding: 0.2rem 1rem;
+}
+.navbar {
+  padding-bottom: 0rem !important;
+  padding-top: 0rem !important;
+}
+.doku_form .no #qsearch__in {
+  height: 1rem;
+  margin-right: 0rem;
+  margin-left: 0.5rem;
+}
+ct-navbar .doku_form .no button, ct-sidebar .doku_form .no button {
+  width: 3rem;
+  padding-left: 0.25rem;
+  padding-right: 0.6rem;
+  margin-left: 0.1rem;
+}
+ct-sidebar .doku_form .no #qsearch__in {
+  width: 3rem;
+  margin: 0rem;
+}
+hr {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+#dokuwiki__footer #qsearch__in {
+  border: 1px solid #5e72e4;
+}
+/*loadskin float:right does not appear right.*/
+.dokuwiki .plugin_loadskin{
+  float: unset;
+}
+
+ul, ol{
+  padding: 0.3em;
+}
+li, dd{
+    margin-left: 1.1em;
+}
+
 /*# sourceMappingURL=doku.css.map */
+

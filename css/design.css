@@ -71,18 +71,18 @@
 
 /* make wiki links look the same as tool links in tool bars */
 #dokuwiki__usertools a.wikilink1,
-#dokuwiki__pagetools a.wikilink1,
+.dokuwiki__pagetools a.wikilink1,
 #dokuwiki__usertools a.wikilink2,
-#dokuwiki__pagetools a.wikilink2 {
+.dokuwiki__pagetools a.wikilink2 {
     color: #00c;
     border-bottom-width: 0;
 }
 #dokuwiki__usertools a.wikilink2:hover,
-#dokuwiki__pagetools a.wikilink2:hover,
+.dokuwiki__pagetools a.wikilink2:hover,
 #dokuwiki__usertools a.wikilink2:active,
-#dokuwiki__pagetools a.wikilink2:active,
+.dokuwiki__pagetools a.wikilink2:active,
 #dokuwiki__usertools a.wikilink2:focus,
-#dokuwiki__pagetools a.wikilink2:focus {
+.dokuwiki__pagetools a.wikilink2:focus {
     text-decoration: underline;
 }
 
@@ -111,7 +111,7 @@
     width: 100%;
 }
 #dokuwiki__usertools ul,
-#dokuwiki__pagetools ul {
+.dokuwiki__pagetools ul {
     /* imitate #dokuwiki__site */
     margin: 0 auto;
     max-width: __site_width__;
@@ -128,7 +128,7 @@
 
 /*____________ page tools ____________*/
 
-#dokuwiki__pagetools {
+.dokuwiki__pagetools {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -137,14 +137,14 @@
     width: 100%;
     z-index: 10;
 }
-#dokuwiki__pagetools ul li {
+.dokuwiki__pagetools ul li {
     display: inline;
     margin: 0 1.5em 0 0;
 }
-#dokuwiki__pagetools ul li a.action.top {
+.dokuwiki__pagetools ul li a.action.top {
     float: right;
 }
-[dir=rtl] #dokuwiki__pagetools ul li a.action.top {
+[dir=rtl] .dokuwiki__pagetools ul li a.action.top {
     float: left;
 }
 
