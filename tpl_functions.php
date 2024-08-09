@@ -239,9 +239,7 @@ function tpl_showsection($section,$tools=null){
             if($tool=='sidebarpage') $page=$conf['sidebar'];
             else $page=substr($tool,5);
             $findnearest=!str_starts_with($page,':')&&tpl_getConf('findnearestpage');
-			if($findnearest){
-				if(($page2 = page_findnearest($page2))) $page=$page2;
-			}
+			if($findnearest&&($page2 = page_findnearest($page))) $page=$page2;
             tpl_include_page($page, 1, 0);
         }
         elseif($tool=='msgarea'){

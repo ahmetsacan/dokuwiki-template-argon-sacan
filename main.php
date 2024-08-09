@@ -25,11 +25,7 @@ $showIcon = tpl_getConf('showIcon');
 		tpl_metaheaders();
 		echo tpl_favicon(['favicon',	'mobile']);
 		tpl_includeFile('meta.html');
-		#I know the CSS and JS imports can be done within the style.ini and script.js files,
-		#but I had some issues with styling (and import order) there, so I'm doing those imports here. 
 		?>
-		<link href="<?php echo tpl_basedir(); ?>assets/css/fonts.css" rel="stylesheet">
-		<link href="<?php echo tpl_basedir(); ?>assets/css/doku.css" rel="stylesheet" />
 	</head>
 
 	<body class="docs ">
