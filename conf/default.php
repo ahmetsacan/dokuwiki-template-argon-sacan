@@ -22,3 +22,4 @@ $conf['exposeusertools']=1;
 $conf['handlenotitle']=0;
 $conf['handleprintview']=0;
 $conf['handleprintview_alterlinks']=0;
+$conf['handlebasetarget']=0;

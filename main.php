@@ -16,8 +16,6 @@ $showIcon = tpl_getConf('showIcon');
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-		<link rel="icon" type="image/png" href="assets/img/favicon.png">
 			<?php 
 		echo "<title>";
 		echo tpl_pagetitle().' ['.strip_tags($conf['title']).']';
@@ -31,8 +29,19 @@ $showIcon = tpl_getConf('showIcon');
 	<body class="docs ">
 		<div id="dokuwiki__site">
 		<?php
+			if(isset($_REQUEST['pv'])&&!isset($_REQUEST['printview'])) $_REQUEST['printview']=$_REQUEST['pv']; #pv->printview alias
 			ob_start(); tpl_content(false);	$pagecontent = ob_get_clean();
 
+			//======= HANDLE basetarget parameter =======
+			if(tpl_getConf('handlebasetarget')){
+				if(isset($_REQUEST['basetarget'])&&$_REQUEST['basetarget']&&in_array($_REQUEST['basetarget'],['_blank','_self','_parent','_top'])){
+					$pagecontent=preg_replace('#<a\b#','<a target="'.$_REQUEST['basetarget'].'"',$pagecontent);
+				}
+				#ahmet: this one is special to my usecase.
+				elseif(preg_match('#^https://learn.dcollege.net#',$_SERVER['HTTP_REFERER'])&&$_SERVER['HTTP_SEC_FETCH_DEST']=='iframe'){
+					echo "<base target='_blank'>";
+				}
+			}
 			//======= HANDLE notitle parameter =======
 			if(tpl_getConf('handlenotitle')&&isset($_REQUEST['notitle'])&&(empty($_REQUEST['title'])||$_REQUEST['title'])){
 				preg_match('#<(h\d+)\b#',$pagecontent,$m,PREG_OFFSET_CAPTURE);
@@ -45,11 +54,13 @@ $showIcon = tpl_getConf('showIcon');
 				}
 			}
 			//======= HANDLE printview parameter =======
-			if(tpl_getConf('handleprintview')&&isset($_REQUEST['printview'])&&(empty($_REQUEST['printview'])||$_REQUEST['printview'])){
+			if(tpl_getConf('handleprintview')&&isset($_REQUEST['printview'])&&($_REQUEST['printview']===''||$_REQUEST['printview'])){
 				#this is a quick hack to modify links to persist printview=1 parameter.
-				if(tpl_getConf('handleprintview_alterlinks'))	$pagecontent=preg_replace('#(<a href=")([^"]+\?id=[^"]+)("[^<]* class="wikilink2"[^<]*>)#','$1$2&printview=1$3',$pagecontent);
+				if(tpl_getConf('handleprintview_alterlinks'))	$pagecontent=preg_replace('#(<a href=")([^"]+\?id=[^"]+)("[^<]* class="wikilink\d+"[^<]*>)#','$1$2&printview=1$3',$pagecontent);
 				html_msgarea();
+				echo '<div id="dokuwiki__content" class="dokuwiki"><div style="padding-left:1.5em; padding-right:1em">';
 				echo $pagecontent;
+				echo '</div></div>';
 				echo "</body></html>";
 				exit;
 			}

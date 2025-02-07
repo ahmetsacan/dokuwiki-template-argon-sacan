@@ -26,3 +26,4 @@ $meta['exposeusertools']=['onoff'];
 $meta['handlenotitle']=['onoff'];
 $meta['handleprintview']=['onoff'];
 $meta['handleprintview_alterlinks']=['onoff'];
+$meta['handlebasetarget']=['onoff'];

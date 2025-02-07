@@ -26,3 +26,4 @@ $lang['exposeusertools']='Show user tools (i.e., Login link) even when no user i
 $lang['handlenotitle']='Handle the notitle REQUEST parameter to remove the first heading from page content (only works if there is no content before the first heading.)';
 $lang['handleprintview']='Handle the printview REQUEST parameter to show only the main page content.';
 $lang['handleprintview_alterlinks']='In printview, alter all the links to also have the printview parameter (This is a hack and may not work in all cases.)';
+$lang['handlebasetarget']='Handle the basetarget REQUEST parameter to inject target=.... attribute into links in the page. This is useful when the page is included in an iframe and you want all the links to open e.g. in the parent window.';
